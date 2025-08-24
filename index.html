@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Redirect to TikTok</title>
+  <script>
+    function openTikTok() {
+      // ניסיון לפתוח את האפליקציה
+      window.location = "tiktok://user?username=drorgrimberg";
+
+      // אם אחרי 1 שניה לא נפתח (כלומר אין אפליקציה) → דפדפן
+      setTimeout(function() {
+        window.location = "https://www.tiktok.com/@drorgrimberg";
+      }, 1000);
+    }
+  </script>
+</head>
+<body onload="openTikTok()">
+  <p>Redirecting to TikTok...</p>
+</body>
+</html>
